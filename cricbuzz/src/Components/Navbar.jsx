@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Flex,
   Grid,
   HStack,
@@ -9,23 +10,35 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import Feature from './Feature'
+import { Link, Navigate } from "react-router-dom";
 import { SearchIcon, TriangleDownIcon } from "@chakra-ui/icons";
 import { BsPersonCircle } from "react-icons/bs";
 import "./navbar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import BotttomNav from "./BotttomNav";
+import { AppContext } from "../Context/AuthContentextProvider";
+import { goingLoginPage } from "../Context/Action";
 function Navbar() {
+  const { state, dispatch } = useContext(AppContext);
   const [isVisible, setIsVisible] =  useState(false);
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible4, setIsVisible4] = useState(false);
   const [isVisible5, setIsVisible5] = useState(false);
+  console.log(state.wSize)
+ const  handleClick=()=>{
+  dispatch(goingLoginPage("goingloginpage"))
+  // console.log("kabir")
 
+
+ }
+//  goingLogin()
+//  console.log(state)
   return (
     <Box>
-      <Box margin="auto" width="93%" border="1px solid gray" marginTop="0.5rem">
+      <Box margin="auto" w="95%" border="1px solid gray" marginTop="0.5rem">
         <HStack h="4rem" spacing="0" p="0" bg="#009070">
           <Box>
             <Image
@@ -59,6 +72,7 @@ function Navbar() {
             </Link>
           </Box>
           <Box
+          
             onMouseOver={() => setIsVisible(true)}
             onMouseOut={() => setIsVisible(false)}
             className="mainBox"
@@ -152,7 +166,7 @@ function Navbar() {
             <SearchIcon boxSize="1.2rem" color="white" />
           </Box>
           <Box padding="1rem 0.6rem 1rem 0.5rem">
-            <Link to="/login">
+            <Link to="/login" onClick={()=>handleClick()} >
             <BsPersonCircle size="1.7rem" color="white" />
             </Link>
           
@@ -638,6 +652,7 @@ function Navbar() {
         </Box>
       </Box>
     <BotttomNav/>
+    <Feature/>
     </Box>
   );
 }
