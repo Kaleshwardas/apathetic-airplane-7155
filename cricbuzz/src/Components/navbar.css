@@ -4,3 +4,9 @@
 .items:hover{
   background-color: rgb(228, 222, 222);
 }
+.title:hover{
+  background-color: #4e4b4b;
+}
+.title2:hover{
+  background-color: #383636;
+}

@@ -14,10 +14,16 @@ import {
   Spacer,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AppContext } from "../Context/AuthContentextProvider";
+import { goingHomePage } from "../Context/Action";
 
 function Login() {
+  const { state, dispatch } = useContext(AppContext);
+  function handleGoing(){
+   dispatch(goingHomePage("goinglhomepage"))
+  }
   return (
     <Box margin="auto" w="93%" marginTop="0.5rem">
       <HStack
@@ -28,7 +34,7 @@ function Login() {
         bg="#ffffff"
       >
         <Box>
-          <Link>
+          <Link to="/" onClick={()=> handleGoing()}>
             <Text fontSize="xl" color="gray">
               Home <ChevronRightIcon />{" "}
             </Text>
