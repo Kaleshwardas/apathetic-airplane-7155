@@ -27,7 +27,7 @@ function Navbar() {
   const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible4, setIsVisible4] = useState(false);
   const [isVisible5, setIsVisible5] = useState(false);
-  console.log(state.wSize)
+  // console.log(state.wSize)
  const  handleClick=()=>{
   dispatch(goingLoginPage("goingloginpage"))
   // console.log("kabir")
@@ -652,7 +652,7 @@ function Navbar() {
         </Box>
       </Box>
     <BotttomNav/>
-    <Feature/>
+
     </Box>
   );
 }

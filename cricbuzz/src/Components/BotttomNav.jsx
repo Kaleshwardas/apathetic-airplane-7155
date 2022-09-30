@@ -6,7 +6,7 @@ import { AppContext } from "../Context/AuthContentextProvider";
 import "./navbar.css";
 function BotttomNav() {
   const { state, dispatch } = useContext(AppContext);
-  console.log(state.wSize)
+  // console.log(state.wSize)
  
   const setToggle=()=>{
     dispatch(ToggleBottomNav(!state.wSize)) 
@@ -14,7 +14,7 @@ function BotttomNav() {
   return (
     <>
       <Box>
-        <Box w="95%"  margin="auto" h="3.2rem">
+        <Box w="95%"  margin="auto" h="3.2rem" marginBottom="0.8rem">
           <HStack h="3.2rem" spacing="0" bg="#4a4a4a">
             <Box
               className="title"
