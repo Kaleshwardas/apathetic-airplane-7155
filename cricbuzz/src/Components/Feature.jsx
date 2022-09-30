@@ -75,7 +75,7 @@ export default function Carousel() {
         <MdArrowForwardIos />
       </IconButton>
 
-      <Box bg="#ffffff" textAlign="left" marginTop="-40px" w="full" h="170px">
+      <Box bg="#ffffff" textAlign="left" marginTop="-50px" w="full" h="170px">
         <Text
           color="#009070"
           fontWeight="bold"

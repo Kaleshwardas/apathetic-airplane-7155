@@ -25,7 +25,7 @@ function Login() {
    dispatch(goingHomePage("goinglhomepage"))
   }
   return (
-    <Box margin="auto" w="93%" marginTop="0.5rem">
+    <Box margin="auto" w="93%" h="60rem" bg="#ffffff" marginTop="0.5rem">
       <HStack
         h="4rem"
         spacing="0"
@@ -81,6 +81,7 @@ function Login() {
             borderBottom="1px solid gray"
             borderRadius="none"
             type="text"
+            bg="#ffffff"
             placeholder="Enter email your id"
           />
         </InputGroup>
@@ -94,6 +95,7 @@ function Login() {
             borderBottom="1px solid gray"
             borderRadius="none"
             type="password"
+            bg="#ffffff"
             placeholder="Password"
           />
         </InputGroup>
