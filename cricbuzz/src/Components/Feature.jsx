@@ -17,29 +17,49 @@ async function getData(){
 export default function Carousel() {
     const [data,setData]=useState([])
   const [slider, setSlider] = useState(true);
-//    useEffect(()=>{
-//     fecthData()
-//    },[])
+  const [fect,setFect]=useState(false)
+
+  //  useEffect(()=>{
+  //   fecthData()
+  //  },[])
    async function fecthData(){
     try{
         let matchData= await getData();
         // console.log(matchData)
         setData(matchData.data)
+        setFect(true)
     }catch(err){
         console.log(err)
     }
    }
-   const n=data.length;
-   console.log(n)
-   const firstData=[];
-   for(let i=0;i<data.length-2;i++){
-       firstData.push(data[i])
-    }
-    console.log(firstData)
-    const secondData=[];
-   for(let i=data.length-2;i<data.length;i++){
-      secondData.push(data[i])
+   let firstData=[];
+   if(fect){
+     firstData=getData1();
    }
+  
+
+   function getData1(){
+    const newData=[];
+    for(let i=0;i<4;i++){
+        newData.push(data[i])
+     }
+     return newData;
+   }
+   
+    console.log(firstData)
+    let secondData=[];
+    if(fect){
+      secondData= getData2();
+    }
+    function getData2(){
+      const newData=[];
+      for(var i=4;i<6;i++){
+        newData.push(data[i])
+      }
+      return newData;
+    }
+  
+ 
    console.log(secondData)
   return (
     <Box textAlign={"center"} h="200px" w="95%" margin="auto">
@@ -51,7 +71,7 @@ export default function Carousel() {
         _hover={{ color: "white", bg: "#009070" }}
         transform={"translate(-20%, -200%)"}
         display={slider ? "none" : "block"}
-        top="90%"
+        top="80%"
         left="2%"
         onClick={() => setSlider(true)}
         p="1rem 1rem 2rem 1rem"
@@ -62,7 +82,7 @@ export default function Carousel() {
       <IconButton
         borderRadius="50%"
         // display="block"
-        top="90%"
+        top="80%"
         left="96%"
         bg="#009070"
         color="white"
