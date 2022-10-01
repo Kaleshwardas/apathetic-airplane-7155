@@ -24,7 +24,7 @@ function Home() {
   const [sedule, setSedule] = useState([]);
   const options = {
     method: "GET",
-    url: "https://hs-consumer-api.espncricinfo.com/v1/pages/story/news?lang=en",
+    url: "https://hs-consumer-api.espncricinfo.com/v1/pages/story/news?lang=en&page=1",
   };
   const options2 = {
     method: "GET",
@@ -137,12 +137,12 @@ function Home() {
     return newDa;
   }
 
-  console.log(Latest);
+  console.log(Videos);
   return (
     <>
     <Carousel/>
-    <Box w="95%" margin={"auto"} marginTop="-20px">
-      <HStack w="full" h="370rem" >
+    <Box w="95%"  margin={"auto"}   >
+      <Box display="flex" justifyContent="space-between" w="full" marginTop="-1.3rem" h="auto"  >
         <Box h="full" w="17rem">
           <Box h="92rem" w="full" bg="#ffffff" marginTop="-0.9rem">
             <Box marginTop="0.8rem" marginLeft="2rem">
@@ -249,9 +249,9 @@ function Home() {
           <Box
             w="35rem"
             bg="#ffffff"
-            h="365rem"
-            marginTop="-5rem"
+            h="auto"            
             padding="1rem"
+         
           >
             {Latest.map((el, i) => (
               <Box key={i}>
@@ -285,7 +285,7 @@ function Home() {
             ))}
           </Box>
         </Box>
-        <Box h="full" w="25rem">
+        <Box h="full" w="25rem" >
           <Box bg="#ffffff" w="full" h="22rem"></Box>
           <Box bg="#ffffff" w="full" h="70rem" marginTop="0.8rem">
             <Box marginTop="0.8rem" padding="1rem">
@@ -309,15 +309,18 @@ function Home() {
                       transform={"translate(350%, -290%)"}
                       bg="#222;"
                     >
+                      <Link href={`/video/${el.objectId}`} >
                       <Box display="block" transform={"translate(25%, 30%)"}>
                         <AiFillCaretRight size="1.8rem" color=" white" />
                       </Box>
+                      </Link>
+                      
                     </Box>
                   </Box>
                   <Box marginTop="0.5rem">
-                    <Text fontWeight="650" fontSize="xl">
+                    <Link  href={`/video/${el.objectId}`} fontWeight="650" fontSize="xl">
                       {el.title}
-                    </Text>
+                    </Link>
                     <Text>
                       <Moment fromNow>{el.publishedAt}</Moment>
                     </Text>
@@ -374,7 +377,7 @@ function Home() {
           </Box>
           <Box marginTop="0.8rem" bg="#ffffff" w="full" h="22rem"></Box>
         </Box>
-      </HStack>
+      </Box>
  
     </Box>
     </>

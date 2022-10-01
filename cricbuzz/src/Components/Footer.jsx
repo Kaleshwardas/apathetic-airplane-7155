@@ -6,7 +6,7 @@ import { ImFacebook, ImPinterest } from "react-icons/im";
 function Footer() {
   return (
     <>
-      <Box w="109%" margin={"auto"}  bg="#4a4a4a" marginLeft="-3rem" h="20rem">
+      <Box w="109%" margin={"auto"} marginTop="3rem"  bg="#4a4a4a" marginLeft="-3rem" h="20rem">
         <HStack   bg="#4a4a4a" justifyContent="center" h="22rem">
           <Box h="22rem" w="20%">
             <Box >
@@ -23,31 +23,31 @@ function Footer() {
           <Box marginTop="5rem"  h="18rem" w="20%">
             <Text fontWeight="bold" fontSize="23px" color="#ffffff">MOBILE SITE & APPS</Text>
             <HStack marginTop="0.8rem"><AiOutlineGlobal color="white" size="1.3rem"/>
-            <Text color="white" fontSize="1.3rem"> m.cricbuzz.com</Text></HStack>
+            <Link href="https://m.cricbuzz.com/"  _hover={{textDecoration:"none"}}  color="white" fontSize="1.3rem"> m.cricbuzz.com</Link></HStack>
             <HStack marginTop="0.8rem"> <AiFillAndroid color="white" size="1.3rem"/>
-            <Text color="white" fontSize="1.3rem"> Android</Text></HStack>
+            <Link href="https://play.google.com/store/apps/details?id=com.cricbuzz.android"  _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem"> Android</Link></HStack>
             <HStack  marginTop="0.8rem" >  <AiFillApple color="white" size="1.3rem"/>
-            <Text color="white" fontSize="1.3rem">iOS</Text></HStack>
+            <Link href="https://apps.apple.com/app/id360466413" _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem">iOS</Link></HStack>
            
           </Box>
           <Box  h="18rem" w="20%">
-          <Text fontWeight="bold" fontSize="23px" color="#ffffff">MOBILE SITE & APPS</Text>
+          <Link _hover={{textDecoration:"none"}} fontWeight="bold" fontSize="23px" color="#ffffff">MOBILE SITE & APPS</Link>
             <HStack  marginTop="0.8rem"> <ImFacebook color="white" size="1.3rem"/>
-            <Text color="white" fontSize="1.3rem"> facebook</Text></HStack>
+            <Link href="https://www.facebook.com/cricbuzz" _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem"> facebook</Link></HStack>
             <HStack marginTop="0.8rem"> <AiOutlineTwitter color="white" size="1.3rem"/>
-            <Text color="white" fontSize="1.3rem">twitter</Text></HStack>
+            <Link href="https://twitter.com/cricbuzz" _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem">twitter</Link></HStack>
             <HStack marginTop="0.8rem">  <AiFillYoutube color="white" size="1.3rem"/>
-            <Text color="white" fontSize="1.3rem"> youtube</Text></HStack>
+            <Link href="https://www.youtube.com/channel/UCSRQXk5yErn4e14vN76upOw" _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem"> youtube</Link></HStack>
             <HStack marginTop="0.8rem">  <ImPinterest color="white" size="1.3rem"/>
-            <Text color="white" fontSize="1.3rem"> Pinterest</Text></HStack>
+            <Link href="https://in.pinterest.com/cricbuzz/" _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem"> Pinterest</Link></HStack>
           </Box>
           <Box  h="18rem" w="20%" color="white">
           <Text fontWeight="bold" fontSize="23px" color="#ffffff">COMPANY</Text>
-            <Text color="white" fontSize="1.3rem">Careers</Text>
-            <Text color="white" fontSize="1.3rem">Advertise</Text>
-            <Text color="white" fontSize="1.3rem">Privacy Policy</Text>
-            <Text color="white" fontSize="1.3rem">Terms of Use</Text>
-            <Text color="white" fontSize="1.3rem">Cricbuzz TV Ads</Text>
+            <Link _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem">Careers</Link><br />
+            <Link _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem">Advertise</Link><br />
+            <Link _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem">Privacy Policy</Link><br />
+            <Link _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem">Terms of Use</Link><br />
+            <Link _hover={{textDecoration:"none"}} color="white" fontSize="1.3rem">Cricbuzz TV Ads</Link>
           </Box>
         </HStack>
          <Box color="white" display="block"  w="50rem"     transform={"translate(40%, -200%)"} h="2rem" > 
