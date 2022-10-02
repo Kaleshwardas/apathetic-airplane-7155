@@ -1,0 +1,263 @@
+
+ {
+   "data":[
+    {
+      "id": "75969186-1455-43fb-8746-df83e8308028",
+      "name": "Chepauk Super Gillies vs Lyca Kovai Kings, Final",
+      "status": "No result (rain) - CSG and LKK joint-winners",
+      "venue": "SNR College Cricket Ground, Coimbatore",
+      "date": "2022-07-31",
+      "dateTimeGMT": "2022-07-31T13:45:00",
+      "teams": [
+        "Chepauk Super Gillies",
+        "Lyca Kovai Kings"
+      ],
+      "teamInfo": [
+        {
+          "name": "Chepauk Super Gillies",
+          "shortname": "CSG",
+          "img": "https://g.cricapi.com/img/teams/136-637957472174708637.webp"
+        },
+        {
+          "name": "Lyca Kovai Kings",
+          "shortname": "LKK",
+          "img": "https://g.cricapi.com/img/teams/216-637940203986869942.webp"
+        }
+      ],
+      "score": [
+        {
+          "r": 138,
+          "w": 9,
+          "o": 17,
+          "inning": "Lyca Kovai Kings Inning 1"
+        },
+        {
+          "r": 14,
+          "w": 2,
+          "o": 4,
+          "inning": "Chepauk Super Gillies Inning 1"
+        }
+      ],
+      "series_id": "41bcbe72-ee4b-454c-90eb-fc68798e383a",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true
+    },
+      {
+        "id": "b8194294-008e-439b-8e70-a98a49f9de28",
+        "name": "Pakistan Women vs Malaysia Women, 3rd Match",
+        "matchType": "t20",
+        "status": "Pakistan Women won by 9 wkts",
+        "venue": "Sylhet Outer Cricket Stadium, Sylhet",
+        "date": "2022-10-02",
+        "dateTimeGMT": "2022-10-02T03:00:00",
+        "teams": [
+          "Pakistan Women",
+          "Malaysia Women"
+        ],
+        "teamInfo": [
+          {
+            "name": "Malaysia Women",
+            "shortname": "ML-W",
+            "img": "https://g.cricapi.com/img/teams/1551-637926306213013515.webp"
+          },
+          {
+            "name": "Pakistan Women",
+            "shortname": "PAKW",
+            "img": "https://g.cricapi.com/img/teams/67-637877074931980375.webp"
+          }
+        ],
+        "score": [
+          {
+            "r": 57,
+            "w": 9,
+            "o": 20,
+            "inning": "Malaysia Women Inning 1"
+          },
+          {
+            "r": 61,
+            "w": 1,
+            "o": 9,
+            "inning": "Pakistan Women Inning 1"
+          }
+        ],
+        "series_id": "248b7e77-14dc-49a3-8702-30fbc7fc1b8f",
+        "fantasyEnabled": true,
+        "bbbEnabled": true,
+        "hasSquad": true
+      },
+      {
+        "id": "9fa6e817-6661-4b15-a4ea-82c470468a01",
+        "name": "Saurashtra vs Rest of India, Irani Cup",
+        "status": "Day 2: 2nd Session - Rest of India lead by 175 runs",
+        "venue": "Saurashtra Cricket Association Stadium, Rajkot",
+        "date": "2022-10-01",
+        "dateTimeGMT": "2022-10-01T04:00:00",
+        "teams": [
+          "Saurashtra",
+          "Rest of India"
+        ],
+        "teamInfo": [
+          {
+            "name": "Rest of India",
+            "shortname": "ROI",
+            "img": "https://h.cricapi.com/img/icon512.png"
+          },
+          {
+            "name": "Saurashtra",
+            "shortname": "SAUR",
+            "img": "https://g.cricapi.com/img/teams/78-637897803602821716.png"
+          }
+        ],
+        "score": [
+          {
+            "r": 98,
+            "w": 10,
+            "o": 24.5,
+            "inning": "Saurashtra Inning 1"
+          },
+          {
+            "r": 273,
+            "w": 6,
+            "o": 82.2,
+            "inning": "Rest of India Inning 1"
+          }
+        ],
+        "series_id": "cee541d0-47f7-4df2-afb7-31d4758a7fbb",
+        "fantasyEnabled": true,
+        "bbbEnabled": false,
+        "hasSquad": true
+      },
+      {
+        "id": "7bbafeae-471c-4fbb-a2de-82f11f650153",
+        "name": "Western Australia vs New South Wales, 6th Match",
+        "status": "Western Australia won by 9 wkts",
+        "venue": "W.A.C.A. Ground, Perth",
+        "date": "2022-10-01",
+        "dateTimeGMT": "2022-10-01T02:05:00",
+        "teams": [
+          "Western Australia",
+          "New South Wales"
+        ],
+        "teamInfo": [
+          {
+            "name": "New South Wales",
+            "shortname": "NSW",
+            "img": "https://g.cricapi.com/img/teams/56-637991992698313262.webp"
+          },
+          {
+            "name": "Western Australia",
+            "shortname": "WA",
+            "img": "https://g.cricapi.com/img/teams/103-637987555730367982.webp"
+          }
+        ],
+        "score": [
+          {
+            "r": 76,
+            "w": 10,
+            "o": 21.4,
+            "inning": "New South Wales Inning 1"
+          },
+          {
+            "r": 77,
+            "w": 1,
+            "o": 17,
+            "inning": "Western Australia Inning 1"
+          }
+        ],
+        "series_id": "0b21d30a-9959-42c0-9010-684c21d295a1",
+        "fantasyEnabled": true,
+        "bbbEnabled": false,
+        "hasSquad": true
+      }],
+      "data2":[
+        {
+          "id": "cc020012-59e4-4042-a71c-84a519963a4b",
+          "name": "West Indies Women vs New Zealand Women, 2nd T20I",
+          "matchType": "odi",
+          "status": "New Zealand Women won by 6 wkts",
+          "venue": "Sir Vivian Richards Stadium, North Sound, Antigua",
+          "date": "2022-10-01",
+          "dateTimeGMT": "2022-10-01T14:00:00",
+          "teams": [
+            "West Indies Women",
+            "New Zealand Women"
+          ],
+          "teamInfo": [
+            {
+              "name": "New Zealand Women",
+              "shortname": "NZW",
+              "img": "https://g.cricapi.com/img/teams/58-637877077173296488.webp"
+            },
+            {
+              "name": "West Indies Women",
+              "shortname": "WIW",
+              "img": "https://g.cricapi.com/img/teams/102-637877078650138806.webp"
+            }
+          ],
+          "score": [
+            {
+              "r": 107,
+              "w": 5,
+              "o": 20,
+              "inning": "West Indies Women Inning 1"
+            },
+            {
+              "r": 108,
+              "w": 4,
+              "o": 19.5,
+              "inning": "New Zealand Women Inning 1"
+            }
+          ],
+          "series_id": "1c53b8a2-2f88-413c-8883-161f088022bd",
+          "fantasyEnabled": true,
+          "bbbEnabled": true,
+          "hasSquad": true
+        },
+        {
+          "id": "5642ad0a-30dc-428e-8b01-2110dcfcc98e",
+          "name": "India Capitals vs Manipal Tigers, 12th Match",
+          "status": "Manipal Tigers won by 3 wkts",
+          "venue": "Barkatullah Khan Stadium, Jodhpur",
+          "date": "2022-10-01",
+          "dateTimeGMT": "2022-10-01T14:00:00",
+          "teams": [
+            "India Capitals",
+            "Manipal Tigers"
+          ],
+          "teamInfo": [
+            {
+              "name": "India Capitals",
+              "shortname": "IC",
+              "img": "https://g.cricapi.com/img/teams/2405-637992708459979762.webp"
+            },
+            {
+              "name": "Manipal Tigers",
+              "shortname": "MNT",
+              "img": "https://g.cricapi.com/img/teams/2416-637992708015142845.webp"
+            }
+          ],
+          "score": [
+            {
+              "r": 183,
+              "w": 2,
+              "o": 20,
+              "inning": "India Capitals Inning 1"
+            },
+            {
+              "r": 186,
+              "w": 7,
+              "o": 20,
+              "inning": "Manipal Tigers Inning 1"
+            }
+          ],
+          "series_id": "94a66681-38e9-4ae5-8516-b91e279a7b36",
+          "fantasyEnabled": true,
+          "bbbEnabled": false,
+          "hasSquad": true
+        }
+      ]
+    
+  }
+
+  

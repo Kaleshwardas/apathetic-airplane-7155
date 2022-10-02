@@ -12,7 +12,7 @@ import {
   Spacer,
   Stack,
   Text,
-  Link
+
 } from "@chakra-ui/react";
 import Feature from "./Feature";
 
@@ -23,8 +23,10 @@ import { useContext, useState } from "react";
 import BotttomNav from "./BotttomNav";
 import { AppContext } from "../Context/AuthContentextProvider";
 import { goingLoginPage } from "../Context/Action";
+import { Link} from "react-router-dom";
 function Navbar() {
   const { state, dispatch } = useContext(AppContext);
+  const [redirect ,seredirect]=useState(false)
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
@@ -34,9 +36,10 @@ function Navbar() {
   const [isVisible6, setIsVisible6] = useState(false);
   // console.log(state.wSize)
   const handleClick = () => {
-    dispatch(goingLoginPage("goingloginpage"));
-    // console.log("kabir")
-  };
+    dispatch(goingLoginPage('going succesfull'))
+    seredirect(true)
+  }
+
   
   return (
     <Box>
@@ -44,7 +47,7 @@ function Navbar() {
         <HStack h="4rem" spacing="0" p="0" bg="#009070">
           <Box >
            
-            <Link href="/">
+            <Link to="/">
             <Image
               marginLeft="1.4rem"
               marginRight="1rem"
@@ -61,7 +64,7 @@ function Navbar() {
             className="mainBox"
             padding="1rem 0.3rem 1rem 0.4rem"
           >
-            <Link>
+            <Link to="/livescore" _hover={{textDecoration:"none"}}>
               <Text color="white" fontSize="lg">
                 Live Score
               </Text>
