@@ -9,7 +9,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -22,7 +21,6 @@ const getData = (url) => {
   return fetch(url).then((res) => res.json());
 };
 
-
 function News() {
   const [fect, setFect] = useState(false);
   const [fect3, setFect3] = useState(false);
@@ -33,38 +31,43 @@ function News() {
   const [latest, setLatest] = useState([]);
 
   let id = news_id;
-  let page=(Math.floor(Math.random()*10)+1)
+  let page = Math.floor(Math.random() * 10) + 1;
   useEffect(() => {
     getStory(id);
     getItem(id);
     getStories(page);
-    worlNews()
+    worlNews();
   }, [id]);
   function getStory(id) {
     getData(
       `https://hs-consumer-api.espncricinfo.com/v1/pages/story/home?storyId=${id}`
-    ).then((res) => {
-      setNews(res.story);
-      setFect(true);
-    }).catch((err)=>{
-      alert("page not found")
-    })
+    )
+      .then((res) => {
+        setNews(res.story);
+        setFect(true);
+      })
+      .catch((err) => {
+        alert("page not found");
+      });
   }
   function getItem(id) {
     getData(
       `https://hs-consumer-api.espncricinfo.com/v1/pages/story/home?storyId=${id}`
-    ).then(
-      (res) => {
+    )
+      .then((res) => {
         // console.log(res.content.content.items)
         setItems(res.content.content.items);
         setFect1(true);
-      }).catch((err)=>{
-        alert("page not found")
       })
+      .catch((err) => {
+        alert("page not found");
+      });
   }
   function getStories(page) {
     getData(
-      `https://hs-consumer-api.espncricinfo.com/v1/pages/story/news?lang=en&page=${[page]}`
+      `https://hs-consumer-api.espncricinfo.com/v1/pages/story/news?lang=en&page=${[
+        page,
+      ]}`
     ).then((res) => {
       // console.log(res);
       setLatest(res.content.stories.results);
@@ -100,7 +103,7 @@ function News() {
   var Latest2 = [];
   if (fect3) {
     Latest2 = getData7();
-  } 
+  }
   function getData7() {
     let newData = [];
     for (var i = 10; i < 16; i++) {
@@ -108,19 +111,21 @@ function News() {
     }
     return newData;
   }
-  const [wnews,setWnews]=useState();
-   const [fects,setFects]=useState(false)
+  const [wnews, setWnews] = useState();
+  const [fects, setFects] = useState(false);
   function worlNews() {
-    getData("https://newsapi.org/v2/top-headlines?country=us&apiKey=1f5e94483e944a038b9f87bb4c7ffe88").then((res) => {
+    getData(
+      "https://newsapi.org/v2/top-headlines?country=us&apiKey=1f5e94483e944a038b9f87bb4c7ffe88"
+    ).then((res) => {
       console.log(res.articles);
-      setWnews(res.articles)
-      setFects(true)
+      setWnews(res.articles);
+      setFects(true);
     });
   }
-  var world= [];
+  var world = [];
   if (fects) {
-     world = getData0();
-  } 
+    world = getData0();
+  }
   function getData0() {
     let newData = [];
     for (var i = 0; i < 9; i++) {
@@ -129,7 +134,7 @@ function News() {
     return newData;
   }
 
-  console.log(world)
+  console.log(world);
   return (
     <>
       <Box
@@ -225,40 +230,44 @@ function News() {
               </Text>
             </Box>
             <Grid marginTop="1rem" templateColumns="repeat(2, 1fr)" gap={6}>
-              {Latest2.map((el,i)=>(
-                     <Box key={i} display="flex" gap="8px" h="7rem"  padding="0.3rem">
-                     <Box h="full" w="30%">
-                       <Image
-                         borderRadius="5px"
-                         boxSize="full"
-                         src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_400/lsci${el.image.url}`}
-                       />
-                     </Box>
-                     <Box  h="full" w="70%">
-                       <Link   href={`/users/${el.objectId}`} fontSize="19px" fontWeight="500">
-                       {el.title}
-                       </Link>
-                     </Box>
-                   </Box>
+              {Latest2.map((el, i) => (
+                <Box key={i} display="flex" gap="8px" h="7rem" padding="0.3rem">
+                  <Box h="full" w="30%">
+                    <Image
+                      borderRadius="5px"
+                      boxSize="full"
+                      src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_400/lsci${el.image.url}`}
+                    />
+                  </Box>
+                  <Box h="full" w="70%">
+                    <Link
+                      href={`/users/${el.objectId}`}
+                      fontSize="19px"
+                      fontWeight="500"
+                    >
+                      {el.title}
+                    </Link>
+                  </Box>
+                </Box>
               ))}
-             
             </Grid>
-            <Box marginTop="2rem" >
-              <Text fontSize="20px" fontWeight="bold">FROM AROUND THE WEB</Text>
+            <Box marginTop="2rem">
+              <Text fontSize="20px" fontWeight="bold">
+                FROM AROUND THE WEB
+              </Text>
             </Box>
             <Grid marginTop="1rem" templateColumns="repeat(3, 1fr)" gap={6}>
-              {world.map((el,i)=>(
-                 <Box key={i} h="16rem" >
-                 <Box h="13rem">
-                   <Image boxSize="full" src={el.urlToImage}/>
-                 </Box>
-                 <Text fontWeight="500"  fontSize="17px" >{el.title}</Text>
-               </Box>
+              {world.map((el, i) => (
+                <Box key={i} h="16rem">
+                  <Box h="13rem">
+                    <Image boxSize="full" src={el.urlToImage} />
+                  </Box>
+                  <Text fontWeight="500" fontSize="17px">
+                    {el.title}
+                  </Text>
+                </Box>
               ))}
-            
-              
             </Grid>
-
           </Box>
 
           <Box h="200rem" w="30%" padding="0.6rem">
@@ -359,7 +368,7 @@ function News() {
                   LATEST NEWS
                 </Text>
               </Box>
-              {Latest.map((el,i) => (
+              {Latest.map((el, i) => (
                 <Box
                   h="8.4rem"
                   key={i}

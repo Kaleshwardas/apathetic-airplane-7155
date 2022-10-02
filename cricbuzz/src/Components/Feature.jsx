@@ -3,64 +3,15 @@ import { Box, HStack, IconButton, Spacer, Text } from "@chakra-ui/react";
 
 import { MdArrowForwardIos, MdOutlineArrowBackIos } from "react-icons/md";
 import { useEffect } from "react";
+import macthdata from "./macthdata.json"
 
-async function getData(){
-    try{
-        let res= await fetch("https://api.cricapi.com/v1/currentMatches?apikey=20cc6c46-c1ae-4df4-b034-ea9776216680&offset=0")
-        let data= await res.json();
-        return data;
-    }catch(err){
-        console.log(err)
-    }
-   
-}
 export default function Carousel() {
-    const [data,setData]=useState([])
+  console.log(macthdata)
+
   const [slider, setSlider] = useState(true);
-  const [fect,setFect]=useState(false)
-
-  //  useEffect(()=>{
-  //   fecthData()
-  //  },[])
-   async function fecthData(){
-    try{
-        let matchData= await getData();
-        // console.log(matchData)
-        setData(matchData.data)
-        setFect(true)
-    }catch(err){
-        console.log(err)
-    }
-   }
-   let firstData=[];
-   if(fect){
-     firstData=getData1();
-   }
-  
-
-   function getData1(){
-    const newData=[];
-    for(let i=0;i<4;i++){
-        newData.push(data[i])
-     }
-     return newData;
-   }
-   
-    console.log(firstData)
-    let secondData=[];
-    if(fect){
-      secondData= getData2();
-    }
-    function getData2(){
-      const newData=[];
-      for(var i=4;i<6;i++){
-        newData.push(data[i])
-      }
-      return newData;
-    }
-  
  
-   console.log(secondData)
+
+  
   return (
     <Box textAlign={"center"} h="200px" w="95%" margin="auto">
       <IconButton
@@ -107,7 +58,7 @@ export default function Carousel() {
         </Text>
         {slider ? (
           <HStack spacing="0" h="150px" marginTop="-1rem">
-             {firstData.map((el)=>(
+             {macthdata.data.map((el)=>(
                     <Box
                     borderRight="1px solid #dad3d3"
                     h="5rem"
@@ -145,7 +96,7 @@ export default function Carousel() {
           </HStack>
         ) : (
           <HStack spacing="0" h="150px" marginTop="-1rem">
-             {secondData.map((el)=>(
+             {macthdata.data2.map((el)=>(
                     <Box
                     borderRight="1px solid #dad3d3"
                     h="5rem"

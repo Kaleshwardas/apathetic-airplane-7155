@@ -8,7 +8,7 @@ import { useContext } from "react";
 import Footer from "./Components/Footer";
 function App() {
   const { state, dispatch } = useContext(AppContext);
-  // console.log(state)
+  console.log(state)
   return (
     <Container  maxW="full" bg="#E3E6E3"  >
     {state.login ? <Navbar2/>:<Navbar/>}

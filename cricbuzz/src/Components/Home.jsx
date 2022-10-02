@@ -286,7 +286,9 @@ function Home() {
           </Box>
         </Box>
         <Box h="full" w="25rem" >
-          <Box bg="#ffffff" w="full" h="22rem"></Box>
+          <Box bg="#ffffff" padding="0.4rem" w="full" h="22rem">
+            <Image boxSize="full" src="https://tpc.googlesyndication.com/simgad/18392794220762119992"/>
+          </Box>
           <Box bg="#ffffff" w="full" h="70rem" marginTop="0.8rem">
             <Box marginTop="0.8rem" padding="1rem">
               <Text color="#009070" fontWeight="bold" fontSize="xl">
@@ -341,12 +343,14 @@ function Home() {
               </Box>
             </Box>
           </Box>
-          <Box marginTop="0.8rem" bg="#ffffff" w="full" h="22rem"></Box>
+          <Box marginTop="0.8rem" padding="0.4rem" bg="#ffffff" w="full" h="22rem">
+          <Image boxSize="full" src="https://s0.2mdn.net/simgad/17522800239581062037"/>
+          </Box>
           <Box
             marginTop="0.8rem"
             bg="#ffffff"
             w="full"
-            h="226rem"
+            h="auto"
             padding="1rem"
           >
             <Text color="#009070" fontWeight="bold" fontSize="xl">
@@ -375,7 +379,9 @@ function Home() {
               </Box>
             ))}
           </Box>
-          <Box marginTop="0.8rem" bg="#ffffff" w="full" h="22rem"></Box>
+          <Box marginTop="0.8rem" padding="0.4rem" bg="#ffffff" w="full" h="22rem">
+          <Image boxSize="full" src="https://s0.2mdn.net/simgad/16946756515499873491"/>
+          </Box>
         </Box>
       </Box>
  

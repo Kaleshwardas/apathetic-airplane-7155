@@ -15,15 +15,35 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AppContext } from "../Context/AuthContentextProvider";
-import { goingHomePage } from "../Context/Action";
+import { goingHomePage, LoginSuccess } from "../Context/Action";
+import { useState } from "react";
 
 function Login() {
+  const [form,setForm]=useState({
+    email:"",
+    password:"",
+    status:false
+  })
   const { state, dispatch } = useContext(AppContext);
+  const handleChange=(e)=>{
+     const {name,value}=e.target
+    setForm({...form,[name]:value})
+  }
+
   function handleGoing(){
    dispatch(goingHomePage("goinglhomepage"))
   }
+  const handleSubmit=(e)=>{
+         console.log(form)
+         dispatch(LoginSuccess("login sucses"))
+         dispatch(goingHomePage("goinglhomepage"))
+  }
+  if(state.isAuth){
+    return <Navigate to="/"/>
+  }
+  const {email,password,status}=form
   return (
     <Box margin="auto" w="93%" h="60rem" bg="#ffffff" marginTop="0.5rem">
       <HStack
@@ -34,7 +54,7 @@ function Login() {
         bg="#ffffff"
       >
         <Box>
-          <Link to="/" onClick={()=> handleGoing()}>
+          <Link to="/" onClick={handleSubmit}>
             <Text fontSize="xl" color="gray">
               Home <ChevronRightIcon />{" "}
             </Text>
@@ -73,7 +93,7 @@ function Login() {
         </Text>
         <InputGroup margin="auto" marginTop="5rem" w="25rem">
           <InputLeftElement
-            pointerEvents="none"
+            // pointerEvents="none"
             children={<AiOutlineMail size="30px" color="gray" />}
           />
           <Input
@@ -82,6 +102,9 @@ function Login() {
             borderRadius="none"
             type="text"
             bg="#ffffff"
+            value={email}
+            name="email"
+            onChange={handleChange}
             placeholder="Enter email your id"
           />
         </InputGroup>
@@ -96,6 +119,9 @@ function Login() {
             borderRadius="none"
             type="password"
             bg="#ffffff"
+            value={password}
+            name="password"
+            onChange={handleChange}
             placeholder="Password"
           />
         </InputGroup>
@@ -104,12 +130,13 @@ function Login() {
           margin="auto"
           marginTop="2rem"
           colorScheme="green"
-          defaultChecked
+          checked={status}
+          name="status"
         >
           I agree with the Terms of Use and Privacy Policy of Cricbuzz
         </Checkbox>
 
-        <Button w="20rem" fontSize="lg" margin="auto" marginTop="2rem" bg="#009070" colorScheme="#009070" variant="solid">
+        <Button onClick={handleSubmit} w="20rem" fontSize="lg" margin="auto" marginTop="2rem" bg="#009070" colorScheme="#009070" variant="solid">
           Submit
         </Button>
       </Box>

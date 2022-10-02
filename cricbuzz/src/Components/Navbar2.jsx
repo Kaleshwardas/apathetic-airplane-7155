@@ -18,6 +18,7 @@ function Navbar2() {
           </Box>
         </HStack>
       </Box>
+      
     </Box>
   );
 }

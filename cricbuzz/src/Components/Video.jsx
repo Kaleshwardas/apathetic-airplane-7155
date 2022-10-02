@@ -17,7 +17,7 @@ function Video() {
 
   useEffect(() => {
     getVideo(id);
-  });
+  },[id]);
   function getVideo(id) {
     getData(
       `https://hs-consumer-api.espncricinfo.com/v1/pages/video/home?country=in&videoId=1337591`
